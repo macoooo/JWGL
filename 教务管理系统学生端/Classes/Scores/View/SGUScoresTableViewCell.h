@@ -10,5 +10,5 @@
 
 @interface SGUScoresTableViewCell : UITableViewCell
 
-
+- (void)reloadCellWithData:(id)data;
 @end

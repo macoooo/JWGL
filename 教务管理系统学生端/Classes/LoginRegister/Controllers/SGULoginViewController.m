@@ -13,6 +13,7 @@
 #import "SGUBaseTabBarController.h"
 #import "SGULoginView.h"
 #import "SGURegisterViewController.h"
+#import "SGUVerifyViewController.h"
 
 @interface SGULoginViewController ()
 
@@ -72,41 +73,53 @@
 }
 
 - (void)login {
-    //    NSDictionary *parameters = @{@"username":self.loginView.usersTextField.text,@"password":self.loginView.passwordTextField.text};
-    //    NSLog(@"%@----parameters----", parameters);
-    //    if([APIClient networkType] > 0) {
-    //        [APIClient requestURL:@"http://www.shidongxuan.top:8000/user/login" httpMethod:POST contentType:@"application/x-www-form- urlencoded" params:parameters response:^(ApiRequestStatusCode requestStatusCode, id JSON) {
-    //            NSLog(@"%@---JSON----", JSON);
-    //            if([JSON[@"status"] isEqual:@0]) {
-    //                BCLTabBarController *tabBarController = [[BCLTabBarController alloc]init];
-    //                [self presentViewController:tabBarController animated:YES completion:nil];
-    //            } else {
-    //                [self showAlertView:@"账号或密码错误" andMessage:@"请重新检查"];
-    //            }
-    //        }];
-    //    }
-    SGUCourseChartsViewController *courseViewController = [[SGUCourseChartsViewController alloc] init];
-    SGUScoresViewController *scoresViewController = [[SGUScoresViewController alloc] init];
-    SGUMineViewController *mineViewController = [[SGUMineViewController alloc] init];
+        NSDictionary *parameters = @{@"num":self.loginView.usersTextField.text,@"pwd":self.loginView.passwordTextField.text};
+        NSLog(@"%@----parameters----", parameters);
+        if([APIClient networkType] > 0) {
+            [APIClient requestURL:@"http://203.195.193.218/es/login" httpMethod:GET contentType:nil params:parameters response:^(ApiRequestStatusCode requestStatusCode, id JSON) {
+                switch (requestStatusCode) {
+                    case ApiRequestOK:
+                        NSLog(@"%@---JSON----", JSON);
+                        if([JSON[@"errCode"] isEqual:@101]) {
+                            [self showAlertView:@"请输入合法信息" andMessage:@"请重新检查"];
+                        } else if ([JSON[@"errCode"] isEqual:@2]) {
+                            [self showAlertView:@"用户名或密码错误" andMessage:@"请重新检查"];
+                    
+                        } else {
+                            SGUCourseChartsViewController *courseViewController = [[SGUCourseChartsViewController alloc] init];
+                            SGUScoresViewController *scoresViewController = [[SGUScoresViewController alloc] init];
+                            SGUMineViewController *mineViewController = [[SGUMineViewController alloc] init];
+                            
+                            NSMutableArray *viewControllerMutableArray = [NSMutableArray array];
+                            [viewControllerMutableArray addObject:courseViewController];
+                            [viewControllerMutableArray addObject:scoresViewController];
+                            [viewControllerMutableArray addObject:mineViewController];
+                            
+                            NSArray *titleArray = @[@"sgu_ic_course_tabBar",@"sgu_ic_scores_tabBar",@"sgu_ic_mine_tabBar"];
+                            SGUBaseTabBarController *tabBarController = [[SGUBaseTabBarController alloc] init];
+                            [tabBarController setCodeTabbarController:viewControllerMutableArray andviewControllerTitleMutableArray:titleArray];
+                            [self presentViewController:tabBarController animated:YES completion:nil];
+                        }
+                        break;
+                        
+                    default:
+                        break;
+                }
+                
+            }];
+        }
     
-    NSMutableArray *viewControllerMutableArray = [NSMutableArray array];
-    [viewControllerMutableArray addObject:courseViewController];
-    [viewControllerMutableArray addObject:scoresViewController];
-    [viewControllerMutableArray addObject:mineViewController];
-    
-    NSArray *titleArray = @[@"sgu_ic_course_tabBar",@"sgu_ic_scores_tabBar",@"sgu_ic_mine_tabBar"];
-    SGUBaseTabBarController *tabBarController = [[SGUBaseTabBarController alloc] init];
-    [tabBarController setCodeTabbarController:viewControllerMutableArray andviewControllerTitleMutableArray:titleArray];
-    [self presentViewController:tabBarController animated:YES completion:nil];
     
 }
 - (void)registered {
-     SGURegisterViewController *registerViewController = [[SGURegisterViewController alloc] init];
-    registerViewController.returnValueBlock = ^(NSString *passedUserName, NSString *passedPassword) {
-        self.loginView.usersTextField.text = passedUserName;
-        self.loginView.passwordTextField.text = passedPassword;
-    };
-    [self presentViewController:registerViewController animated:NO completion:nil];
+//     SGURegisterViewController *registerViewController = [[SGURegisterViewController alloc] init];
+//    registerViewController.returnValueBlock = ^(NSString *passedUserName, NSString *passedPassword) {
+//        self.loginView.usersTextField.text = passedUserName;
+//        self.loginView.passwordTextField.text = passedPassword;
+//    };
+//    [self presentViewController:registerViewController animated:NO completion:nil];
+    SGUVerifyViewController *verifyViewController = [[SGUVerifyViewController alloc] init];
+    [self presentViewController:verifyViewController animated:YES completion:nil];
 }
 //根据传参显示弹窗
 - (void)showAlertView:(NSString *)title andMessage:(NSString *)message {

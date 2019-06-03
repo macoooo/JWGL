@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class scoresMessageModel;
 @interface SGUScoresView : UIView
 
 @property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, copy) NSArray *modelArray;
+@property (nonatomic, copy) void(^selectCallBlock)(NSString *year, NSString *semester);
 @end

@@ -88,14 +88,29 @@
 }
 - (void)dropDownClick:(UIButton *)sender {
     if (self.flag) {
-        [self rotateArrowImage];
-        [self addSubview:self.tableView];
-        _tableView.frame = CGRectMake(48, 40, 140, _itemArray.count * 40);
+        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+        [window addSubview:self.tableView];
+        
+        //[self addSubview:self.tableView];
+        CGFloat tableHeight = _itemArray.count * 40;
+        CGRect frame = [self convertRect:self.bounds toView:window];
+        CGFloat tableViewY = frame.origin.y + frame.size.height;
+        CGRect tableViewFrame;
+        tableViewFrame.size.width = frame.size.width - 40;
+        tableViewFrame.size.height = tableHeight;
+        tableViewFrame.origin.x = frame.origin.x + 45;
+        if (tableViewY + tableHeight < CGRectGetHeight([UIScreen mainScreen].bounds)) {
+            tableViewFrame.origin.y = tableViewY;
+        }else {
+            tableViewFrame.origin.y = frame.origin.y - tableHeight;
+        }
+        _tableView.frame = tableViewFrame;
+        //_tableView.frame = CGRectMake(48, 40, 140, _itemArray.count * 40);
     } else {
-        [self rotateArrowImage];
         [_tableView removeFromSuperview];
     }
     self.flag = !self.flag;
+    [self rotateArrowImage];
 }
 - (void)rotateArrowImage {
     //旋转箭头
@@ -137,6 +152,9 @@
         SGUDropDownListItem *item = _itemArray[index];
         _selectedItem = item;
         _itemLabel.text = item.itemName;
+        [_tableView removeFromSuperview];
+        [self rotateArrowImage];
+        self.flag = 1;
     }
 }
 #pragma mark - tableView
@@ -149,6 +167,7 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     [self selectedItemAtIndex:indexPath.row];
     if (_selectedBlock) {
@@ -157,6 +176,9 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _itemArray.count;
+}
+- (void)setSelectedIndex:(NSUInteger)selectedIndex {
+    [self selectedItemAtIndex:selectedIndex];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

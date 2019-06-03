@@ -37,14 +37,12 @@
         weakSelf.pwdString = pwd;
         weakSelf.surePwdString = surePwd;
         [weakSelf sureRgPwd];
-        //[weakSelf showSureRgAlertView];
-        
     };
     
     
     self.registerView.cancelRgCallBackBlock = ^(UIButton *button) {
         
-        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+        [weakSelf dismissViewControllerClass:NSClassFromString(@"SGULoginViewController")];
     };
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -76,37 +74,34 @@
     }];
 }
 - (void)sureRgPwd {
-    NSString *url = @"http://www.shidongxuan.top:8000/user/register";
-    NSDictionary *parameters = @{@"username":self.userNameString,@"password":self.pwdString,@"gender":@1, @"phone":@"15009175070",@"email":@"dfssd",@"birth":@"2019/08/18 00:00:00"};
-    NSLog(@"%@--parameters---", parameters);
+    NSString *url = @"http://203.195.193.218/es/enSurePwd";
+    NSDictionary *parameters = @{@"pwd1":self.pwdString,@"pwd2":self.surePwdString};
     
-    
-//    if([APIClient networkType] > 0) {
-//        [APIClient requestURL:url httpMethod:POST contentType:@"application/x-www-form-urlencoded" params:parameters response:^(ApiRequestStatusCode requestStatusCode, id JSON) {
-//            switch (requestStatusCode) {
-//                case ApiRequestOK:{
-//                    self.returnParameters = JSON;
-//                    NSLog(@"%@---self.returnParameters----", self.returnParameters);
-//                    if([self->_returnParameters[@"status"] isEqual:@0]) {
-//                        [self showSureRgAlertView];
-//                    } else {
-//                        [self showAlertView:@"用户名已存在" andMessage:@"唉。。。"];
-//                    }
-//                    
-//                    if(![self isEqualPassword:self.pwdString andsurePwd:self.surePwdString]) {
-//                        [self showAlertView:@"两次密码输入不同哦" andMessage:@"请重新检查输入"];
-//                    }
-//                    break;
-//                }
-//                case ApiRequestError:
-//                    break;
-//                case ApiRequestNotReachable:
-//                    break;
-//                default:
-//                    break;
-//            }
-//        }];
-//    }
+    if([APIClient networkType] > 0) {
+        [APIClient requestURL:url httpMethod:GET contentType:nil params:parameters response:^(ApiRequestStatusCode requestStatusCode, id JSON) {
+            switch (requestStatusCode) {
+                case ApiRequestOK:{
+                    if ([JSON[@"errCode"] isEqual:@0]) {
+                        [self showSureRgAlertView];
+                    } else if ([JSON[@"errCode"] isEqual:@2]) {
+                        [self showAlertView:@"密码不一致！" andMessage:nil];
+                    } else if ([JSON[@"errCode"] isEqual:@2]) {
+                        [self showAlertView:@"你的信息已过期，请重新操作" andMessage:nil];
+                    } else if ([JSON[@"errCode"] isEqual:@2]) {
+                        [self showAlertView:@"请不要输入空值！！！" andMessage:nil];
+                    }
+                    
+                    break;
+                }
+                case ApiRequestError:
+                    break;
+                case ApiRequestNotReachable:
+                    break;
+                default:
+                    break;
+            }
+        }];
+    }
 }
 - (void)getData:(id)sender {
     NSDictionary *returnParameters = (NSDictionary *)sender;
@@ -125,15 +120,25 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 - (void)showSureRgAlertView {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"注册成功" message:@"耶" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"修改成功" message:@"耶" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         if (self.returnValueBlock) {
             self.returnValueBlock(self.userNameString, self.pwdString);
         }
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self dismissViewControllerClass:NSClassFromString(@"SGULoginViewController")];
     }];
     [alertController addAction:okAction];
     [self presentViewController:alertController animated:YES completion:nil];
+}
+- (void)dismissViewControllerClass:(Class)class {
+    UIViewController *vc = self;
+    while (![vc isKindOfClass:class] && vc != nil) {
+        vc = vc.presentingViewController;
+        if ([vc isKindOfClass:[UINavigationController class]]) {
+            vc = ((UINavigationController *)vc).viewControllers.lastObject;
+        }
+    }
+    [vc dismissViewControllerAnimated:YES completion:nil];
 }
 /*
 #pragma mark - Navigation

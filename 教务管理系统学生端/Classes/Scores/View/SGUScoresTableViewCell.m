@@ -7,6 +7,7 @@
 //
 
 #import "SGUScoresTableViewCell.h"
+#import "SGUScoresModel.h"
 
 @interface SGUScoresTableViewCell ()
 
@@ -48,7 +49,6 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.courseNameLabel.text = @"课程： 高数";
     [self.courseNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.backView.mas_left).offset(10);
         make.top.equalTo(self.backView.mas_top).offset(5);
@@ -56,7 +56,7 @@
         make.height.mas_equalTo(40);
     }];
     
-    self.courseScoresLabel.text = @"成绩：100";
+    
     [self.courseScoresLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.backView.mas_right).offset(-10);
         make.top.equalTo(self.courseNameLabel.mas_top);
@@ -64,7 +64,7 @@
         make.height.mas_equalTo(40);
     }];
     
-    self.coursePropertyLabel.text = @"课程性质: 必修";
+    
     [self.coursePropertyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.courseNameLabel.mas_left);
         make.top.equalTo(self.courseNameLabel.mas_bottom).offset(10);
@@ -72,7 +72,7 @@
         make.height.mas_equalTo(40);
     }];
 
-    self.courseCreditLabel.text = @"学分：6";
+    
     [self.courseCreditLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.courseScoresLabel.mas_left);
         make.top.equalTo(self.coursePropertyLabel.mas_top);
@@ -80,13 +80,20 @@
         make.height.mas_equalTo(40);
     }];
 
-    self.courseTeacherLabel.text = @"任课教师：章虎冬";
+    
     [self.courseTeacherLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.courseNameLabel.mas_left);
         make.top.equalTo(self.coursePropertyLabel.mas_bottom).offset(5);
         make.width.mas_lessThanOrEqualTo(@200);
         make.height.mas_equalTo(40);
     }];
+}
+- (void)reloadCellWithData:(id)data {
+    self.courseNameLabel.text = data[@"course_name"];
+    self.courseScoresLabel.text = data[@"score"];
+    self.coursePropertyLabel.text = @"课程性质: 必修";
+    self.courseCreditLabel.text = @"学分：6";
+    self.courseTeacherLabel.text = @"任课教师：章虎冬";
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

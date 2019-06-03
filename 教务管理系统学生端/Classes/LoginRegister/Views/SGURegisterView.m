@@ -100,7 +100,7 @@ static const CGFloat kLoginLeft = 60;
         make.width.mas_equalTo(100);
         make.height.mas_equalTo(40);
     }];
-    [_sureRgButton setTitle:@"确认注册" forState:UIControlStateNormal];
+    [_sureRgButton setTitle:@"确认修改" forState:UIControlStateNormal];
     [self setButton:_sureRgButton];
     [_sureRgButton addTarget:self action:@selector(sureRgButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     

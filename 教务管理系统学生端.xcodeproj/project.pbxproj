@@ -37,8 +37,13 @@
 		970924992276DE8A00DA25C0 /* 开机.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 970924982276DE8A00DA25C0 /* 开机.jpg */; };
 		9709249C2276E03200DA25C0 /* SGUScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9709249B2276E03200DA25C0 /* SGUScoresViewController.m */; };
 		9709249F2276E0F000DA25C0 /* SGUMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9709249E2276E0F000DA25C0 /* SGUMineViewController.m */; };
+		97124E6122A54FED00D521A1 /* SGUScoresModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 97124E6022A54FED00D521A1 /* SGUScoresModel.m */; };
 		97172A81228941E100A49CF2 /* SGUDropDownMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97172A80228941E100A49CF2 /* SGUDropDownMenuView.m */; };
 		97172A832289596200A49CF2 /* xiala.png in Resources */ = {isa = PBXBuildFile; fileRef = 97172A822289596100A49CF2 /* xiala.png */; };
+		9743A8CF22A4F1DF000430A8 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9743A8CB22A4F1DF000430A8 /* APIClient.m */; };
+		9743A8D022A4F1DF000430A8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9743A8CD22A4F1DF000430A8 /* Reachability.m */; };
+		9743A8D322A50276000430A8 /* SGUVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9743A8D222A50276000430A8 /* SGUVerifyViewController.m */; };
+		9743A8D622A5028B000430A8 /* SGUVerifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9743A8D522A5028B000430A8 /* SGUVerifyView.m */; };
 		97442B6F229D297C00E590EF /* SGUScoresTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 97442B6E229D297C00E590EF /* SGUScoresTableViewCell.m */; };
 		974F5F54227FFF43006BF185 /* SGUCourseChartsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 974F5F53227FFF43006BF185 /* SGUCourseChartsCollectionViewCell.m */; };
 		979CF1F2229E796900339CB0 /* SGUMineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 979CF1F1229E796900339CB0 /* SGUMineTableViewCell.m */; };
@@ -114,9 +119,20 @@
 		9709249B2276E03200DA25C0 /* SGUScoresViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUScoresViewController.m; sourceTree = "<group>"; };
 		9709249D2276E0F000DA25C0 /* SGUMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUMineViewController.h; sourceTree = "<group>"; };
 		9709249E2276E0F000DA25C0 /* SGUMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUMineViewController.m; sourceTree = "<group>"; };
+		97124E5F22A54FED00D521A1 /* SGUScoresModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUScoresModel.h; sourceTree = "<group>"; };
+		97124E6022A54FED00D521A1 /* SGUScoresModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUScoresModel.m; sourceTree = "<group>"; };
 		97172A7F228941E100A49CF2 /* SGUDropDownMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUDropDownMenuView.h; sourceTree = "<group>"; };
 		97172A80228941E100A49CF2 /* SGUDropDownMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUDropDownMenuView.m; sourceTree = "<group>"; };
 		97172A822289596100A49CF2 /* xiala.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiala.png; sourceTree = "<group>"; };
+		9743A8CA22A4F1DF000430A8 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		9743A8CB22A4F1DF000430A8 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		9743A8CC22A4F1DF000430A8 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		9743A8CD22A4F1DF000430A8 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		9743A8CE22A4F1DF000430A8 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		9743A8D122A50276000430A8 /* SGUVerifyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUVerifyViewController.h; sourceTree = "<group>"; };
+		9743A8D222A50276000430A8 /* SGUVerifyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUVerifyViewController.m; sourceTree = "<group>"; };
+		9743A8D422A5028B000430A8 /* SGUVerifyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUVerifyView.h; sourceTree = "<group>"; };
+		9743A8D522A5028B000430A8 /* SGUVerifyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUVerifyView.m; sourceTree = "<group>"; };
 		97442B6D229D297C00E590EF /* SGUScoresTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUScoresTableViewCell.h; sourceTree = "<group>"; };
 		97442B6E229D297C00E590EF /* SGUScoresTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUScoresTableViewCell.m; sourceTree = "<group>"; };
 		974F5F52227FFF43006BF185 /* SGUCourseChartsCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUCourseChartsCollectionViewCell.h; sourceTree = "<group>"; };
@@ -196,6 +212,7 @@
 		970924242276C44B00DA25C0 /* 教务管理系统学生端 */ = {
 			isa = PBXGroup;
 			children = (
+				9743A8C922A4F1DF000430A8 /* Manage */,
 				970924782276D21C00DA25C0 /* Main */,
 				970924752276D20700DA25C0 /* UIView+Geometry.h */,
 				970924762276D20F00DA25C0 /* UIView+Geometry.m */,
@@ -260,6 +277,7 @@
 		9709245F2276CDD900DA25C0 /* Scores */ = {
 			isa = PBXGroup;
 			children = (
+				97124E5E22A54FC500D521A1 /* Model */,
 				970924652276CE2F00DA25C0 /* View */,
 				970924642276CE2300DA25C0 /* Controller */,
 			);
@@ -366,6 +384,8 @@
 				970924852276D77E00DA25C0 /* SGULoginView.m */,
 				9705D3F8229CD9A000A83683 /* SGURegisterView.h */,
 				9705D3F9229CD9A000A83683 /* SGURegisterView.m */,
+				9743A8D422A5028B000430A8 /* SGUVerifyView.h */,
+				9743A8D522A5028B000430A8 /* SGUVerifyView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -377,6 +397,8 @@
 				970924882276D83400DA25C0 /* SGULoginViewController.m */,
 				9705D3F5229CD97E00A83683 /* SGURegisterViewController.h */,
 				9705D3F6229CD97E00A83683 /* SGURegisterViewController.m */,
+				9743A8D122A50276000430A8 /* SGUVerifyViewController.h */,
+				9743A8D222A50276000430A8 /* SGUVerifyViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -397,6 +419,27 @@
 				970924962276DE2F00DA25C0 /* sgu_ic_course_tabBar.png */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		97124E5E22A54FC500D521A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				97124E5F22A54FED00D521A1 /* SGUScoresModel.h */,
+				97124E6022A54FED00D521A1 /* SGUScoresModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9743A8C922A4F1DF000430A8 /* Manage */ = {
+			isa = PBXGroup;
+			children = (
+				9743A8CA22A4F1DF000430A8 /* APIClient.h */,
+				9743A8CB22A4F1DF000430A8 /* APIClient.m */,
+				9743A8CC22A4F1DF000430A8 /* Reachability.h */,
+				9743A8CD22A4F1DF000430A8 /* Reachability.m */,
+				9743A8CE22A4F1DF000430A8 /* Singleton.h */,
+			);
+			path = Manage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -565,18 +608,23 @@
 				974F5F54227FFF43006BF185 /* SGUCourseChartsCollectionViewCell.m in Sources */,
 				970924772276D20F00DA25C0 /* UIView+Geometry.m in Sources */,
 				9709242A2276C44B00DA25C0 /* ViewController.m in Sources */,
+				9743A8D622A5028B000430A8 /* SGUVerifyView.m in Sources */,
 				970924352276C44D00DA25C0 /* main.m in Sources */,
 				9709249C2276E03200DA25C0 /* SGUScoresViewController.m in Sources */,
 				9709248C2276DB1B00DA25C0 /* SGUBaseTabBarController.m in Sources */,
 				979CF1F2229E796900339CB0 /* SGUMineTableViewCell.m in Sources */,
 				97442B6F229D297C00E590EF /* SGUScoresTableViewCell.m in Sources */,
 				9709245A2276CB4500DA25C0 /* SGUCourseChartsViewController.m in Sources */,
+				97124E6122A54FED00D521A1 /* SGUScoresModel.m in Sources */,
+				9743A8D322A50276000430A8 /* SGUVerifyViewController.m in Sources */,
 				970924712276CEA800DA25C0 /* SGUMineView.m in Sources */,
+				9743A8D022A4F1DF000430A8 /* Reachability.m in Sources */,
 				970924272276C44B00DA25C0 /* AppDelegate.m in Sources */,
 				9705D3F7229CD97E00A83683 /* SGURegisterViewController.m in Sources */,
 				9709249F2276E0F000DA25C0 /* SGUMineViewController.m in Sources */,
 				97172A81228941E100A49CF2 /* SGUDropDownMenuView.m in Sources */,
 				970924892276D83400DA25C0 /* SGULoginViewController.m in Sources */,
+				9743A8CF22A4F1DF000430A8 /* APIClient.m in Sources */,
 				970924862276D77E00DA25C0 /* SGULoginView.m in Sources */,
 				970924632276CE1500DA25C0 /* SGUCourseChartsView.m in Sources */,
 				9709246A2276CE5900DA25C0 /* SGUScoresView.m in Sources */,
