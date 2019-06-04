@@ -7,9 +7,10 @@
 //
 
 #import "SGUCourseChartsCollectionViewCell.h"
+#import "SGUCourseChartsModel.h"
 
 @implementation SGUCourseChartsCollectionViewCell
-- (instancetype) initWithFrame:(CGRect)frame {
+- (instancetype) initWithFrame:(CGRect)frame{
     if(self = [super initWithFrame:frame]) {
         self.courseLabel = [[UILabel alloc] init];
         [self.contentView addSubview:self.courseLabel];
@@ -21,9 +22,21 @@
     [super layoutSubviews];
     _courseLabel.frame = self.contentView.frame;
     _courseLabel.textColor = [UIColor blackColor];
-    //_courseLabel.backgroundColor = [UIColor whiteColor];
     _courseLabel.numberOfLines = 0;
     _courseLabel.textAlignment = NSTextAlignmentCenter;
+    _courseLabel.layer.borderWidth = 0.5;
+    _courseLabel.layer.borderColor = [UIColor lightGrayColor].CGColor;
+   
     
+}
+- (void)reloadCollectionCellWithData:(id)data {
+    SGUCourseChartsModel *model = nil;
+    if([data isKindOfClass:NSClassFromString(@"SGUCourseChartsModel")]) {
+        model = data;
+    } else {
+        _courseLabel.text = @" ";
+        return;
+    }
+    _courseLabel.text = [data courseName];
 }
 @end

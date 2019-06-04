@@ -13,8 +13,8 @@
 @interface SGUScoresViewController()
 
 @property (nonatomic, strong) SGUScoresView *scoresView;
-@property (nonatomic ,strong) NSString *semester;
-@property (nonatomic, strong) NSString *year;
+@property (nonatomic ,copy) NSString *semester;
+@property (nonatomic, copy) NSString *year;
 @end
 
 @implementation SGUScoresViewController
@@ -55,7 +55,10 @@
                     } else {
                         self.scoresView.modelArray = [NSArray array];
                         self.scoresView.modelArray = JSON;
-                        NSLog(@"%@", JSON);
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            [self.scoresView.tableView reloadData];
+                        });
+                        NSLog(@"%@", self.scoresView.modelArray);
                     }
                     break;
                     

@@ -138,7 +138,10 @@ DEF_SINGLETON(APIClient);
                 } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                     if(response) {
                         response(ApiRequestError, nil);
-                        NSLog(@"%@", error);
+                        NSData * data = error.userInfo[@"com.alamofire.serialization.response.error.data"];
+                        NSString * str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+                        NSLog(@"服务器的错误原因:%@",str);
+                        NSLog(@"%@ %@",task, error);
                     }
                 }];
                 break;

@@ -11,4 +11,5 @@
 @interface SGUCourseChartsView : UIView
 
 @property (nonatomic, strong) UICollectionView *courseChartsCollectionView;
+@property (nonatomic ,strong) NSArray *modelArray;
 @end

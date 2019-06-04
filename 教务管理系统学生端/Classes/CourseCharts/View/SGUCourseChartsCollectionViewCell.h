@@ -11,4 +11,6 @@
 @interface SGUCourseChartsCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong) UILabel *courseLabel;
+
+- (void)reloadCollectionCellWithData:(id)data;
 @end

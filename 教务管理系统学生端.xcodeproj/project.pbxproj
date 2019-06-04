@@ -37,6 +37,9 @@
 		970924992276DE8A00DA25C0 /* 开机.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 970924982276DE8A00DA25C0 /* 开机.jpg */; };
 		9709249C2276E03200DA25C0 /* SGUScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9709249B2276E03200DA25C0 /* SGUScoresViewController.m */; };
 		9709249F2276E0F000DA25C0 /* SGUMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9709249E2276E0F000DA25C0 /* SGUMineViewController.m */; };
+		970A7DD622A654230056DF3D /* SGUBindingPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 970A7DD522A654230056DF3D /* SGUBindingPhoneViewController.m */; };
+		970A7DD922A654770056DF3D /* SGUBindingPhoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 970A7DD822A654770056DF3D /* SGUBindingPhoneView.m */; };
+		970A7DDC22A659A60056DF3D /* SGUBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 970A7DDB22A659A60056DF3D /* SGUBaseViewController.m */; };
 		97124E6122A54FED00D521A1 /* SGUScoresModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 97124E6022A54FED00D521A1 /* SGUScoresModel.m */; };
 		97172A81228941E100A49CF2 /* SGUDropDownMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97172A80228941E100A49CF2 /* SGUDropDownMenuView.m */; };
 		97172A832289596200A49CF2 /* xiala.png in Resources */ = {isa = PBXBuildFile; fileRef = 97172A822289596100A49CF2 /* xiala.png */; };
@@ -45,6 +48,7 @@
 		9743A8D322A50276000430A8 /* SGUVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9743A8D222A50276000430A8 /* SGUVerifyViewController.m */; };
 		9743A8D622A5028B000430A8 /* SGUVerifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9743A8D522A5028B000430A8 /* SGUVerifyView.m */; };
 		97442B6F229D297C00E590EF /* SGUScoresTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 97442B6E229D297C00E590EF /* SGUScoresTableViewCell.m */; };
+		974BA4E822A6154100D33DD3 /* SGUCourseChartsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 974BA4E722A6154100D33DD3 /* SGUCourseChartsModel.m */; };
 		974F5F54227FFF43006BF185 /* SGUCourseChartsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 974F5F53227FFF43006BF185 /* SGUCourseChartsCollectionViewCell.m */; };
 		979CF1F2229E796900339CB0 /* SGUMineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 979CF1F1229E796900339CB0 /* SGUMineTableViewCell.m */; };
 		979CF1F4229E7C3900339CB0 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 979CF1F3229E7C3900339CB0 /* 4.jpg */; };
@@ -119,6 +123,12 @@
 		9709249B2276E03200DA25C0 /* SGUScoresViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUScoresViewController.m; sourceTree = "<group>"; };
 		9709249D2276E0F000DA25C0 /* SGUMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUMineViewController.h; sourceTree = "<group>"; };
 		9709249E2276E0F000DA25C0 /* SGUMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUMineViewController.m; sourceTree = "<group>"; };
+		970A7DD422A654230056DF3D /* SGUBindingPhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUBindingPhoneViewController.h; sourceTree = "<group>"; };
+		970A7DD522A654230056DF3D /* SGUBindingPhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUBindingPhoneViewController.m; sourceTree = "<group>"; };
+		970A7DD722A654770056DF3D /* SGUBindingPhoneView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUBindingPhoneView.h; sourceTree = "<group>"; };
+		970A7DD822A654770056DF3D /* SGUBindingPhoneView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUBindingPhoneView.m; sourceTree = "<group>"; };
+		970A7DDA22A659A60056DF3D /* SGUBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUBaseViewController.h; sourceTree = "<group>"; };
+		970A7DDB22A659A60056DF3D /* SGUBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUBaseViewController.m; sourceTree = "<group>"; };
 		97124E5F22A54FED00D521A1 /* SGUScoresModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUScoresModel.h; sourceTree = "<group>"; };
 		97124E6022A54FED00D521A1 /* SGUScoresModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUScoresModel.m; sourceTree = "<group>"; };
 		97172A7F228941E100A49CF2 /* SGUDropDownMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUDropDownMenuView.h; sourceTree = "<group>"; };
@@ -135,6 +145,8 @@
 		9743A8D522A5028B000430A8 /* SGUVerifyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUVerifyView.m; sourceTree = "<group>"; };
 		97442B6D229D297C00E590EF /* SGUScoresTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUScoresTableViewCell.h; sourceTree = "<group>"; };
 		97442B6E229D297C00E590EF /* SGUScoresTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUScoresTableViewCell.m; sourceTree = "<group>"; };
+		974BA4E622A6154100D33DD3 /* SGUCourseChartsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUCourseChartsModel.h; sourceTree = "<group>"; };
+		974BA4E722A6154100D33DD3 /* SGUCourseChartsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUCourseChartsModel.m; sourceTree = "<group>"; };
 		974F5F52227FFF43006BF185 /* SGUCourseChartsCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUCourseChartsCollectionViewCell.h; sourceTree = "<group>"; };
 		974F5F53227FFF43006BF185 /* SGUCourseChartsCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUCourseChartsCollectionViewCell.m; sourceTree = "<group>"; };
 		979CF1F0229E796900339CB0 /* SGUMineTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUMineTableViewCell.h; sourceTree = "<group>"; };
@@ -250,6 +262,7 @@
 		970924572276C96000DA25C0 /* CourseCharts */ = {
 			isa = PBXGroup;
 			children = (
+				974BA4E522A613ED00D33DD3 /* Model */,
 				970924602276CDF200DA25C0 /* View */,
 				9709245B2276CB5000DA25C0 /* Controller */,
 			);
@@ -324,6 +337,8 @@
 				970924702276CEA800DA25C0 /* SGUMineView.m */,
 				979CF1F0229E796900339CB0 /* SGUMineTableViewCell.h */,
 				979CF1F1229E796900339CB0 /* SGUMineTableViewCell.m */,
+				970A7DD722A654770056DF3D /* SGUBindingPhoneView.h */,
+				970A7DD822A654770056DF3D /* SGUBindingPhoneView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,6 +348,8 @@
 			children = (
 				9709249D2276E0F000DA25C0 /* SGUMineViewController.h */,
 				9709249E2276E0F000DA25C0 /* SGUMineViewController.m */,
+				970A7DD422A654230056DF3D /* SGUBindingPhoneViewController.h */,
+				970A7DD522A654230056DF3D /* SGUBindingPhoneViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -364,6 +381,8 @@
 			children = (
 				9709248A2276DB1B00DA25C0 /* SGUBaseTabBarController.h */,
 				9709248B2276DB1B00DA25C0 /* SGUBaseTabBarController.m */,
+				970A7DDA22A659A60056DF3D /* SGUBaseViewController.h */,
+				970A7DDB22A659A60056DF3D /* SGUBaseViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -440,6 +459,15 @@
 				9743A8CE22A4F1DF000430A8 /* Singleton.h */,
 			);
 			path = Manage;
+			sourceTree = "<group>";
+		};
+		974BA4E522A613ED00D33DD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				974BA4E622A6154100D33DD3 /* SGUCourseChartsModel.h */,
+				974BA4E722A6154100D33DD3 /* SGUCourseChartsModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -608,6 +636,7 @@
 				974F5F54227FFF43006BF185 /* SGUCourseChartsCollectionViewCell.m in Sources */,
 				970924772276D20F00DA25C0 /* UIView+Geometry.m in Sources */,
 				9709242A2276C44B00DA25C0 /* ViewController.m in Sources */,
+				970A7DDC22A659A60056DF3D /* SGUBaseViewController.m in Sources */,
 				9743A8D622A5028B000430A8 /* SGUVerifyView.m in Sources */,
 				970924352276C44D00DA25C0 /* main.m in Sources */,
 				9709249C2276E03200DA25C0 /* SGUScoresViewController.m in Sources */,
@@ -618,6 +647,8 @@
 				97124E6122A54FED00D521A1 /* SGUScoresModel.m in Sources */,
 				9743A8D322A50276000430A8 /* SGUVerifyViewController.m in Sources */,
 				970924712276CEA800DA25C0 /* SGUMineView.m in Sources */,
+				970A7DD922A654770056DF3D /* SGUBindingPhoneView.m in Sources */,
+				970A7DD622A654230056DF3D /* SGUBindingPhoneViewController.m in Sources */,
 				9743A8D022A4F1DF000430A8 /* Reachability.m in Sources */,
 				970924272276C44B00DA25C0 /* AppDelegate.m in Sources */,
 				9705D3F7229CD97E00A83683 /* SGURegisterViewController.m in Sources */,
@@ -625,6 +656,7 @@
 				97172A81228941E100A49CF2 /* SGUDropDownMenuView.m in Sources */,
 				970924892276D83400DA25C0 /* SGULoginViewController.m in Sources */,
 				9743A8CF22A4F1DF000430A8 /* APIClient.m in Sources */,
+				974BA4E822A6154100D33DD3 /* SGUCourseChartsModel.m in Sources */,
 				970924862276D77E00DA25C0 /* SGULoginView.m in Sources */,
 				970924632276CE1500DA25C0 /* SGUCourseChartsView.m in Sources */,
 				9709246A2276CE5900DA25C0 /* SGUScoresView.m in Sources */,

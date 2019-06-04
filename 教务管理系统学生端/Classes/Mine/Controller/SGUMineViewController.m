@@ -8,6 +8,7 @@
 
 #import "SGUMineViewController.h"
 #import "SGUMineView.h"
+#import "SGUBindingPhoneViewController.h"
 
 @interface SGUMineViewController ()<UITableViewDelegate>
 
@@ -43,6 +44,12 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 0.0;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        SGUBindingPhoneViewController *phoneViewController = [[SGUBindingPhoneViewController alloc] init];
+        [self.navigationController pushViewController:phoneViewController animated:YES];
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

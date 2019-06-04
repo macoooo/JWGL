@@ -52,7 +52,8 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"mineCell"];
             
         }
-        cell.textLabel.text = @"11111";
+        NSArray *arrray = [NSArray arrayWithObjects:@"绑定手机号",@"111",@"111",@"111",@"111",@"111",@"111",@"111", nil];
+        cell.textLabel.text = arrray[indexPath.row];
         cell.imageView.image = [UIImage imageNamed:@"bcl_ic_mine_tabBar"];
         
         return cell;

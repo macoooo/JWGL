@@ -84,31 +84,43 @@
                             [self showAlertView:@"请输入合法信息" andMessage:@"请重新检查"];
                         } else if ([JSON[@"errCode"] isEqual:@2]) {
                             [self showAlertView:@"用户名或密码错误" andMessage:@"请重新检查"];
-                    
+
                         } else {
                             SGUCourseChartsViewController *courseViewController = [[SGUCourseChartsViewController alloc] init];
                             SGUScoresViewController *scoresViewController = [[SGUScoresViewController alloc] init];
                             SGUMineViewController *mineViewController = [[SGUMineViewController alloc] init];
-                            
+
                             NSMutableArray *viewControllerMutableArray = [NSMutableArray array];
                             [viewControllerMutableArray addObject:courseViewController];
                             [viewControllerMutableArray addObject:scoresViewController];
                             [viewControllerMutableArray addObject:mineViewController];
-                            
+
                             NSArray *titleArray = @[@"sgu_ic_course_tabBar",@"sgu_ic_scores_tabBar",@"sgu_ic_mine_tabBar"];
                             SGUBaseTabBarController *tabBarController = [[SGUBaseTabBarController alloc] init];
                             [tabBarController setCodeTabbarController:viewControllerMutableArray andviewControllerTitleMutableArray:titleArray];
                             [self presentViewController:tabBarController animated:YES completion:nil];
                         }
                         break;
-                        
+
                     default:
                         break;
                 }
-                
+
             }];
         }
-    
+//    SGUCourseChartsViewController *courseViewController = [[SGUCourseChartsViewController alloc] init];
+//    SGUScoresViewController *scoresViewController = [[SGUScoresViewController alloc] init];
+//    SGUMineViewController *mineViewController = [[SGUMineViewController alloc] init];
+//    
+//    NSMutableArray *viewControllerMutableArray = [NSMutableArray array];
+//    [viewControllerMutableArray addObject:courseViewController];
+//    [viewControllerMutableArray addObject:scoresViewController];
+//    [viewControllerMutableArray addObject:mineViewController];
+//    
+//    NSArray *titleArray = @[@"sgu_ic_course_tabBar",@"sgu_ic_scores_tabBar",@"sgu_ic_mine_tabBar"];
+//    SGUBaseTabBarController *tabBarController = [[SGUBaseTabBarController alloc] init];
+//    [tabBarController setCodeTabbarController:viewControllerMutableArray andviewControllerTitleMutableArray:titleArray];
+//    [self presentViewController:tabBarController animated:YES completion:nil];
     
 }
 - (void)registered {

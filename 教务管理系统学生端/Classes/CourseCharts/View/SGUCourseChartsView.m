@@ -8,6 +8,7 @@
 
 #import "SGUCourseChartsView.h"
 #import "SGUCourseChartsCollectionViewCell.h"
+#import "SGUCourseChartsModel.h"
 
 #define k_screen_width          [UIScreen mainScreen].bounds.size.width
 // 屏幕物理尺寸高度
@@ -52,19 +53,25 @@ static NSString *const courseCell2 = @"courseCell2";
     if(indexPath.section == 0) {
         SGUCourseChartsCollectionViewCell *cell = [_courseChartsCollectionView dequeueReusableCellWithReuseIdentifier:courseCell1 forIndexPath:indexPath];
         cell.backgroundColor = [UIColor whiteColor];
-        NSArray *weekArray = [NSArray arrayWithObjects:@"    ",@"星期一\n5-6",@"星期二\n5-7", @"星期三\n5-8",@"星期四\n5-9",@"星期五\n5-10",nil];
+        NSArray *weekArray = [NSArray arrayWithObjects:@"    ",@"星期一",@"星期二", @"星期三",@"星期四",@"星期五",nil];
         cell.courseLabel.text = weekArray[indexPath.row];
         cell.courseLabel.backgroundColor = [UIColor colorWithRed:0.37f green:1.00f blue:0.97f alpha:1.00f];
         return cell;
     } else {
         SGUCourseChartsCollectionViewCell *cell = [_courseChartsCollectionView dequeueReusableCellWithReuseIdentifier:courseCell2 forIndexPath:indexPath];
-        cell.courseLabel.text = @"近代史（XXX老师）";
         if(indexPath.row == 0) {
             NSArray *courseSection = [NSArray arrayWithObjects:@"1-2节",@"3-4节",@"5-6节", @"7-8节",@"9-10节",nil];
             cell.courseLabel.text = courseSection[indexPath.section - 1];
             cell.courseLabel.backgroundColor = [UIColor colorWithRed:0.37f green:1.00f blue:0.97f alpha:1.00f];
+        } else {
+            cell.courseLabel.backgroundColor = [UIColor whiteColor];
+            if ([_modelArray[indexPath.section - 1][indexPath.row - 1] isKindOfClass:NSClassFromString(@"SGUCourseChartsModel")]) {
+                 [cell reloadCollectionCellWithData:_modelArray[indexPath.section - 1][indexPath.row - 1]];
+            } else {
+                [cell reloadCollectionCellWithData:nil];
+            }
+           
         }
-        
         return cell;
     }
     

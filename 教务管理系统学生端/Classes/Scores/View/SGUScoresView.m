@@ -83,7 +83,7 @@ static NSString *const scoreCellName = @"scoreCell";
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return self.modelArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SGUScoresTableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:scoreCellName];
@@ -91,7 +91,6 @@ static NSString *const scoreCellName = @"scoreCell";
         cell = [[SGUScoresTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:scoreCellName];
         
     }
-    NSLog(@"%@---self.modelArray[indexPath.row-----", self.modelArray[indexPath.row]);
     [cell reloadCellWithData:self.modelArray[indexPath.row]];
     return cell;
 }
