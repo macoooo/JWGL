@@ -40,6 +40,10 @@
 		970A7DD622A654230056DF3D /* SGUBindingPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 970A7DD522A654230056DF3D /* SGUBindingPhoneViewController.m */; };
 		970A7DD922A654770056DF3D /* SGUBindingPhoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 970A7DD822A654770056DF3D /* SGUBindingPhoneView.m */; };
 		970A7DDC22A659A60056DF3D /* SGUBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 970A7DDB22A659A60056DF3D /* SGUBaseViewController.m */; };
+		970FAD5A22A787CC00A4934F /* SGUPersonMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 970FAD5922A787CC00A4934F /* SGUPersonMessageViewController.m */; };
+		970FAD5C22A794EE00A4934F /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 970FAD5B22A794EE00A4934F /* 5.jpg */; };
+		970FAD5F22A795E500A4934F /* SGUPersonMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 970FAD5E22A795E500A4934F /* SGUPersonMessageView.m */; };
+		970FAD6222A79D7400A4934F /* SGUSmallMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 970FAD6122A79D7400A4934F /* SGUSmallMessageView.m */; };
 		97124E6122A54FED00D521A1 /* SGUScoresModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 97124E6022A54FED00D521A1 /* SGUScoresModel.m */; };
 		97172A81228941E100A49CF2 /* SGUDropDownMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97172A80228941E100A49CF2 /* SGUDropDownMenuView.m */; };
 		97172A832289596200A49CF2 /* xiala.png in Resources */ = {isa = PBXBuildFile; fileRef = 97172A822289596100A49CF2 /* xiala.png */; };
@@ -129,6 +133,13 @@
 		970A7DD822A654770056DF3D /* SGUBindingPhoneView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUBindingPhoneView.m; sourceTree = "<group>"; };
 		970A7DDA22A659A60056DF3D /* SGUBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUBaseViewController.h; sourceTree = "<group>"; };
 		970A7DDB22A659A60056DF3D /* SGUBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUBaseViewController.m; sourceTree = "<group>"; };
+		970FAD5822A787CC00A4934F /* SGUPersonMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUPersonMessageViewController.h; sourceTree = "<group>"; };
+		970FAD5922A787CC00A4934F /* SGUPersonMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUPersonMessageViewController.m; sourceTree = "<group>"; };
+		970FAD5B22A794EE00A4934F /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		970FAD5D22A795E500A4934F /* SGUPersonMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUPersonMessageView.h; sourceTree = "<group>"; };
+		970FAD5E22A795E500A4934F /* SGUPersonMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUPersonMessageView.m; sourceTree = "<group>"; };
+		970FAD6022A79D7400A4934F /* SGUSmallMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUSmallMessageView.h; sourceTree = "<group>"; };
+		970FAD6122A79D7400A4934F /* SGUSmallMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUSmallMessageView.m; sourceTree = "<group>"; };
 		97124E5F22A54FED00D521A1 /* SGUScoresModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUScoresModel.h; sourceTree = "<group>"; };
 		97124E6022A54FED00D521A1 /* SGUScoresModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUScoresModel.m; sourceTree = "<group>"; };
 		97172A7F228941E100A49CF2 /* SGUDropDownMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUDropDownMenuView.h; sourceTree = "<group>"; };
@@ -339,6 +350,10 @@
 				979CF1F1229E796900339CB0 /* SGUMineTableViewCell.m */,
 				970A7DD722A654770056DF3D /* SGUBindingPhoneView.h */,
 				970A7DD822A654770056DF3D /* SGUBindingPhoneView.m */,
+				970FAD5D22A795E500A4934F /* SGUPersonMessageView.h */,
+				970FAD5E22A795E500A4934F /* SGUPersonMessageView.m */,
+				970FAD6022A79D7400A4934F /* SGUSmallMessageView.h */,
+				970FAD6122A79D7400A4934F /* SGUSmallMessageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -350,6 +365,8 @@
 				9709249E2276E0F000DA25C0 /* SGUMineViewController.m */,
 				970A7DD422A654230056DF3D /* SGUBindingPhoneViewController.h */,
 				970A7DD522A654230056DF3D /* SGUBindingPhoneViewController.m */,
+				970FAD5822A787CC00A4934F /* SGUPersonMessageViewController.h */,
+				970FAD5922A787CC00A4934F /* SGUPersonMessageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -436,6 +453,7 @@
 				970924922276DE2000DA25C0 /* sgu_ic_mine_tabBar.png */,
 				970924942276DE2700DA25C0 /* sgu_ic_scores_tabBar.png */,
 				970924962276DE2F00DA25C0 /* sgu_ic_course_tabBar.png */,
+				970FAD5B22A794EE00A4934F /* 5.jpg */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -586,6 +604,7 @@
 				970924322276C44D00DA25C0 /* LaunchScreen.storyboard in Resources */,
 				9709242F2276C44D00DA25C0 /* Assets.xcassets in Resources */,
 				9705D404229CDCCB00A83683 /* sgu_ic_logo.png in Resources */,
+				970FAD5C22A794EE00A4934F /* 5.jpg in Resources */,
 				970924932276DE2000DA25C0 /* sgu_ic_mine_tabBar.png in Resources */,
 				9709242D2276C44B00DA25C0 /* Main.storyboard in Resources */,
 			);
@@ -634,6 +653,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				974F5F54227FFF43006BF185 /* SGUCourseChartsCollectionViewCell.m in Sources */,
+				970FAD6222A79D7400A4934F /* SGUSmallMessageView.m in Sources */,
 				970924772276D20F00DA25C0 /* UIView+Geometry.m in Sources */,
 				9709242A2276C44B00DA25C0 /* ViewController.m in Sources */,
 				970A7DDC22A659A60056DF3D /* SGUBaseViewController.m in Sources */,
@@ -647,6 +667,7 @@
 				97124E6122A54FED00D521A1 /* SGUScoresModel.m in Sources */,
 				9743A8D322A50276000430A8 /* SGUVerifyViewController.m in Sources */,
 				970924712276CEA800DA25C0 /* SGUMineView.m in Sources */,
+				970FAD5A22A787CC00A4934F /* SGUPersonMessageViewController.m in Sources */,
 				970A7DD922A654770056DF3D /* SGUBindingPhoneView.m in Sources */,
 				970A7DD622A654230056DF3D /* SGUBindingPhoneViewController.m in Sources */,
 				9743A8D022A4F1DF000430A8 /* Reachability.m in Sources */,
@@ -657,6 +678,7 @@
 				970924892276D83400DA25C0 /* SGULoginViewController.m in Sources */,
 				9743A8CF22A4F1DF000430A8 /* APIClient.m in Sources */,
 				974BA4E822A6154100D33DD3 /* SGUCourseChartsModel.m in Sources */,
+				970FAD5F22A795E500A4934F /* SGUPersonMessageView.m in Sources */,
 				970924862276D77E00DA25C0 /* SGULoginView.m in Sources */,
 				970924632276CE1500DA25C0 /* SGUCourseChartsView.m in Sources */,
 				9709246A2276CE5900DA25C0 /* SGUScoresView.m in Sources */,

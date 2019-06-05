@@ -9,6 +9,7 @@
 #import "SGUMineViewController.h"
 #import "SGUMineView.h"
 #import "SGUBindingPhoneViewController.h"
+#import "SGUPersonMessageViewController.h"
 
 @interface SGUMineViewController ()<UITableViewDelegate>
 
@@ -49,6 +50,9 @@
     if (indexPath.section == 1 && indexPath.row == 0) {
         SGUBindingPhoneViewController *phoneViewController = [[SGUBindingPhoneViewController alloc] init];
         [self.navigationController pushViewController:phoneViewController animated:YES];
+    } else if (indexPath.section == 0) {
+        SGUPersonMessageViewController *personMessageViewController = [[SGUPersonMessageViewController alloc] init];
+        [self.navigationController pushViewController:personMessageViewController animated:YES];
     }
 }
 - (void)didReceiveMemoryWarning {
