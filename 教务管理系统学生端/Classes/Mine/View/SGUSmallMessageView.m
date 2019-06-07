@@ -36,7 +36,7 @@
         make.width.mas_equalTo(200);
         make.height.mas_equalTo(50);
     }];
-    
+    //self.textField.userInteractionEnabled = YES;
 }
 /*
 // Only override drawRect: if you perform custom drawing.

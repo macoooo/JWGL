@@ -19,9 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationItem.title = @"个人信息";
     
     _personMessageView = [[SGUPersonMessageView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:_personMessageView];
+    
+    _personMessageView.saveCallBack = ^(NSString *idNumber, NSString *nation, NSString *phoneNumber) {
+        
+    };
   
     
     UIImage *originImage = [UIImage imageNamed:@"5.jpg"];

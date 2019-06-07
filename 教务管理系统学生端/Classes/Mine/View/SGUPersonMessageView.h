@@ -10,4 +10,5 @@
 
 @interface SGUPersonMessageView : UIView
 
+@property (nonatomic, copy) void (^saveCallBack)(NSString *idNumber, NSString *nation, NSString *phoneNumber);
 @end

@@ -47,9 +47,15 @@
     return 0.0;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 1 && indexPath.row == 0) {
-        SGUBindingPhoneViewController *phoneViewController = [[SGUBindingPhoneViewController alloc] init];
-        [self.navigationController pushViewController:phoneViewController animated:YES];
+    if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            SGUBindingPhoneViewController *phoneViewController = [[SGUBindingPhoneViewController alloc] init];
+            [self.navigationController pushViewController:phoneViewController animated:YES];
+        } else if (indexPath.row == 1) {
+            SGUPersonMessageViewController *personMessageViewController = [[SGUPersonMessageViewController alloc] init];
+            [self.navigationController pushViewController:personMessageViewController animated:YES];
+        }
+        
     } else if (indexPath.section == 0) {
         SGUPersonMessageViewController *personMessageViewController = [[SGUPersonMessageViewController alloc] init];
         [self.navigationController pushViewController:personMessageViewController animated:YES];

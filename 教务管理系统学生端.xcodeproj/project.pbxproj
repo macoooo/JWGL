@@ -34,7 +34,6 @@
 		970924932276DE2000DA25C0 /* sgu_ic_mine_tabBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 970924922276DE2000DA25C0 /* sgu_ic_mine_tabBar.png */; };
 		970924952276DE2700DA25C0 /* sgu_ic_scores_tabBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 970924942276DE2700DA25C0 /* sgu_ic_scores_tabBar.png */; };
 		970924972276DE2F00DA25C0 /* sgu_ic_course_tabBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 970924962276DE2F00DA25C0 /* sgu_ic_course_tabBar.png */; };
-		970924992276DE8A00DA25C0 /* 开机.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 970924982276DE8A00DA25C0 /* 开机.jpg */; };
 		9709249C2276E03200DA25C0 /* SGUScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9709249B2276E03200DA25C0 /* SGUScoresViewController.m */; };
 		9709249F2276E0F000DA25C0 /* SGUMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9709249E2276E0F000DA25C0 /* SGUMineViewController.m */; };
 		970A7DD622A654230056DF3D /* SGUBindingPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 970A7DD522A654230056DF3D /* SGUBindingPhoneViewController.m */; };
@@ -111,18 +110,17 @@
 		970924692276CE5900DA25C0 /* SGUScoresView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUScoresView.m; sourceTree = "<group>"; };
 		9709246F2276CEA800DA25C0 /* SGUMineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUMineView.h; sourceTree = "<group>"; };
 		970924702276CEA800DA25C0 /* SGUMineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUMineView.m; sourceTree = "<group>"; };
-		970924752276D20700DA25C0 /* UIView+Geometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+Geometry.h"; path = "../../Calorie/Burning-calories-APP/Burning-calories-APP/Burning-calories-APP/Classes/Community/Views/UIView+Geometry.h"; sourceTree = "<group>"; };
-		970924762276D20F00DA25C0 /* UIView+Geometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Geometry.m"; path = "../../Calorie/Burning-calories-APP/Burning-calories-APP/Burning-calories-APP/Classes/Community/Views/UIView+Geometry.m"; sourceTree = "<group>"; };
+		970924752276D20700DA25C0 /* UIView+Geometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+Geometry.h"; path = "../../../MomentKit/MomentKit/MomentKit/Utility/UIView+Geometry.h"; sourceTree = "<group>"; };
+		970924762276D20F00DA25C0 /* UIView+Geometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Geometry.m"; path = "../../../MomentKit/MomentKit/MomentKit/Utility/UIView+Geometry.m"; sourceTree = "<group>"; };
 		970924842276D77E00DA25C0 /* SGULoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGULoginView.h; sourceTree = "<group>"; };
 		970924852276D77E00DA25C0 /* SGULoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGULoginView.m; sourceTree = "<group>"; };
 		970924872276D83400DA25C0 /* SGULoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGULoginViewController.h; sourceTree = "<group>"; };
 		970924882276D83400DA25C0 /* SGULoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGULoginViewController.m; sourceTree = "<group>"; };
 		9709248A2276DB1B00DA25C0 /* SGUBaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUBaseTabBarController.h; sourceTree = "<group>"; };
 		9709248B2276DB1B00DA25C0 /* SGUBaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUBaseTabBarController.m; sourceTree = "<group>"; };
-		970924922276DE2000DA25C0 /* sgu_ic_mine_tabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sgu_ic_mine_tabBar.png; path = ../../../../Downloads/sgu_ic_mine_tabBar.png; sourceTree = "<group>"; };
-		970924942276DE2700DA25C0 /* sgu_ic_scores_tabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sgu_ic_scores_tabBar.png; path = ../../../../Downloads/sgu_ic_scores_tabBar.png; sourceTree = "<group>"; };
-		970924962276DE2F00DA25C0 /* sgu_ic_course_tabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sgu_ic_course_tabBar.png; path = ../../../../Downloads/sgu_ic_course_tabBar.png; sourceTree = "<group>"; };
-		970924982276DE8A00DA25C0 /* 开机.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "开机.jpg"; path = "../../../Calorie/Burning-calories-APP/Burning-calories-APP/Burning-calories-APP/Resource/Welcome/开机.jpg"; sourceTree = "<group>"; };
+		970924922276DE2000DA25C0 /* sgu_ic_mine_tabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sgu_ic_mine_tabBar.png; path = ../../../../../Downloads/sgu_ic_mine_tabBar.png; sourceTree = "<group>"; };
+		970924942276DE2700DA25C0 /* sgu_ic_scores_tabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sgu_ic_scores_tabBar.png; path = ../../../../../Downloads/sgu_ic_scores_tabBar.png; sourceTree = "<group>"; };
+		970924962276DE2F00DA25C0 /* sgu_ic_course_tabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sgu_ic_course_tabBar.png; path = ../../../../../Downloads/sgu_ic_course_tabBar.png; sourceTree = "<group>"; };
 		9709249A2276E03200DA25C0 /* SGUScoresViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUScoresViewController.h; sourceTree = "<group>"; };
 		9709249B2276E03200DA25C0 /* SGUScoresViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGUScoresViewController.m; sourceTree = "<group>"; };
 		9709249D2276E0F000DA25C0 /* SGUMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGUMineViewController.h; sourceTree = "<group>"; };
@@ -449,7 +447,6 @@
 				9705D3FB229CDB9C00A83683 /* sgu_bt_login.png */,
 				9705D3FC229CDB9C00A83683 /* sgu_ic_login_password.png */,
 				97172A822289596100A49CF2 /* xiala.png */,
-				970924982276DE8A00DA25C0 /* 开机.jpg */,
 				970924922276DE2000DA25C0 /* sgu_ic_mine_tabBar.png */,
 				970924942276DE2700DA25C0 /* sgu_ic_scores_tabBar.png */,
 				970924962276DE2F00DA25C0 /* sgu_ic_course_tabBar.png */,
@@ -593,7 +590,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				970924972276DE2F00DA25C0 /* sgu_ic_course_tabBar.png in Resources */,
-				970924992276DE8A00DA25C0 /* 开机.jpg in Resources */,
 				9705D3FE229CDB9C00A83683 /* sgu_ic_login_password.png in Resources */,
 				970924952276DE2700DA25C0 /* sgu_ic_scores_tabBar.png in Resources */,
 				9705D3FD229CDB9C00A83683 /* sgu_bt_login.png in Resources */,

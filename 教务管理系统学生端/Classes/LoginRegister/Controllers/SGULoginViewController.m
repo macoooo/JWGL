@@ -42,9 +42,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
-    NSString *url = @"http:192.168.1.177:8080/es/login";
-//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
     
     // Do any additional setup after loading the view.
 }
@@ -79,6 +77,7 @@
             [APIClient requestURL:@"http://203.195.193.218/es/login" httpMethod:GET contentType:nil params:parameters response:^(ApiRequestStatusCode requestStatusCode, id JSON) {
                 switch (requestStatusCode) {
                     case ApiRequestOK:
+                        
                         NSLog(@"%@---JSON----", JSON);
                         if([JSON[@"errCode"] isEqual:@101]) {
                             [self showAlertView:@"请输入合法信息" andMessage:@"请重新检查"];
